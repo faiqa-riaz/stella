@@ -1,0 +1,23 @@
+/* mfn custom (theme options) */
+
+table th, table td {
+    text-align: left;
+}
+
+
+@font-face {
+    font-family: 'Hind Madurai';
+    src: url("../fonts/hindmadurai-regular-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Hind Madurai', sans-serif;
+}
+

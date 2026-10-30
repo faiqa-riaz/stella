@@ -1,0 +1,224 @@
+/*
+Theme Name: Betheme Child
+Theme URI: https://themes.muffingroup.com/betheme
+Author: Muffin group
+Author URI: https://muffingroup.com
+Description: Child Theme for Betheme
+Template: betheme
+Version: 1.6.2
+*/
+
+
+
+
+
+/* Farben 
+
+
+
+braun     #bf9659
+
+
+*/
+
+body:not(.template-slider) #Header {
+    min-height: 0px;
+}
+
+
+@media only screen and (max-width: 767px) {
+body:not(.template-slider):not(.header-simple) #Header {
+    min-height: 0px;
+
+	} }
+
+
+
+h1, h2 {/*font-family: 'Merienda One', cursive;*/
+}
+
+h1 {font-size:54px;}
+h2 {font-size:36px; line-height:42px;}
+h3 {font-size:26px; }
+h4 {margin-top:20px;}
+
+#Action_bar .social li a {
+    font-size: 24px !important;
+}
+#Action_bar .social li a:hover {
+    color:#bf9659;
+}
+
+
+
+
+#Top_bar .menu li ul li {
+    width: 300px;
+}
+
+#Top_bar .menu > li > a span:not(.description) {
+    padding: 0 42px;
+}
+
+@media only screen and (min-width: 1240px) {
+	
+	
+#Top_bar .top_bar_left {
+    padding-top:30px;
+}
+	
+#Header_creative #Top_bar .menu > li > a span {
+	background:#fff;
+    padding-top:3px; padding-bottom:3px;
+	transition: background-color 0.8s ease-out;
+
+
+}
+	
+.menuo-no-borders #Header_creative #Top_bar .menu > li > a span:hover {
+    background:#f6f2ec;
+	transition: none;
+}
+	
+
+	
+	
+}
+
+
+
+#Subheader {
+    padding: 30px 10px 30px 10px;
+}
+
+#Subheader .column {
+    margin-left: -00px;
+}
+
+
+#Subheader .title {
+	font-style:normal;
+	font-size:54px;
+	margin-bottom:15px;
+}
+
+.subheader-both-center #Subheader .breadcrumbs {
+    margin-top: 10px;
+}
+
+
+
+#Subheader:after {
+    height: 0; box-shadow: none;
+}
+
+
+.subheader-both-left #Subheader .breadcrumbs {
+    margin-top: 5px; 
+}
+
+ #Subheader ul.breadcrumbs li a {
+    color: #855a19;
+}
+
+.wp-caption-text {
+    background: #855a19;
+    color: #fff;
+}
+
+
+#Side_slide {
+    background-color: #855a19;
+    border-color: #855a19;
+}
+
+
+/* Content */
+
+
+#Content {
+    padding-top: 0px;
+}
+
+/*.content_wrapper { padding-left:30px; padding-right:30px; }*/
+
+
+
+
+@media only screen and (max-width: 1239px) and (min-width: 960px) {
+.section_wrapper, .container, .with_aside .content_wrapper {
+    max-width: 100%; padding-left:30px; padding-right:30px;
+}
+}
+
+
+@media only screen and (max-width: 1489px) and (min-width: 1240px) {
+.header-open .section_wrapper, .header-open .container, .header-open.with_aside .content_wrapper {
+    max-width: 100%; padding-left:30px; padding-right:30px;
+	} 
+}
+
+@media only screen and (min-width: 1240px) {
+.section_wrapper, .container {
+    max-width: 1380px; padding-left:30px; padding-right:30px;
+}
+	
+}
+
+
+
+
+
+
+/* Menu */
+
+li#menu-item-2054::before {
+	content: url(../images/leaf-60.png);
+	text-align: center;
+	height:70px;
+	padding-top:40px;
+	display:block;
+}
+
+
+
+
+
+
+#Footer {
+    background-color:#f6f2ec;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Divers */
+
+
+.icon_box .icon_wrapper:before {
+    border-width: 0px;
+    border-style: none;
+
+}
+
+.icon_box .icon_wrapper {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-width: 0px;
+    border-style:none;
+    background-image: none;
+}
+
+.icon_box.icon_position_left .desc_wrapper {
+    padding-top: 20px;
+}
+
+

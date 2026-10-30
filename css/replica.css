@@ -1,0 +1,131 @@
+/* Replacement for Slider Revolution 5.4.6 (auto layout, grid 1600x640).
+   main.js sets --rs-s (scale = width/1600, max 1) and --rs-off (grid centering above 1600px). */
+
+#rev_slider_4_1_wrapper.rs-replica {
+	--rs-s: 1;
+	--rs-off: 0px;
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: calc(640px * var(--rs-s));
+	margin: 0 auto;
+}
+
+.rs-replica .rs-bg {
+	position: absolute;
+	inset: 0;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.rs-replica .rs-grid {
+	position: absolute;
+	top: 0;
+	left: var(--rs-off);
+	width: 1600px;
+	height: 640px;
+	transform: scale(var(--rs-s));
+	transform-origin: 0 0;
+}
+
+.rs-replica .rs-layer {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	animation: rsFadeIn .3s cubic-bezier(.645, .045, .355, 1) .01s both;
+}
+
+.rs-replica .rs-shape {
+	left: -17px;
+	top: 326px;
+	width: 1151px;
+	height: 202px;
+	z-index: 5;
+	background-color: rgba(133, 90, 25, .5);
+}
+
+.rs-replica .rs-title,
+.rs-replica .rs-sub {
+	white-space: nowrap;
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-weight: 400;
+	color: #fff;
+	letter-spacing: 0;
+}
+
+.rs-replica .rs-title {
+	left: 121px;
+	top: 353px;
+	z-index: 6;
+	font-size: 78px;
+	line-height: 48px;
+}
+
+.rs-replica .rs-sub {
+	left: 124px;
+	top: 436px;
+	z-index: 7;
+	font-size: 30px;
+	line-height: 34px;
+}
+
+@keyframes rsFadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* "Zeit für Ihr Wohlempfinden" row: portrait fills the full height of the text column beside it */
+@media only screen and (min-width: 768px) {
+	.mcb-wrap-b22f8yc14 .mcb-wrap-inner {
+		display: flex;
+		align-items: stretch;
+	}
+
+	.mcb-item-fx4l9u2tu > .animate,
+	.mcb-item-fx4l9u2tu .image_frame,
+	.mcb-item-fx4l9u2tu .image_wrapper {
+		height: 100%;
+	}
+
+	#Content .mcb-item-fx4l9u2tu .image_wrapper img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+/* Desktop sidebar header: when it is taller than the window, it scrolls on its own
+   (wheel, touch, keyboard focus) with the scrollbar hidden; the social icon follows the menu */
+@media only screen and (min-width: 1240px) {
+	#Header_creative {
+		overflow-x: hidden;
+		overflow-y: auto;
+		overscroll-behavior: contain;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	#Header_creative::-webkit-scrollbar {
+		display: none;
+	}
+
+	#Header_creative .creative-wrapper {
+		display: flex !important;
+		flex-direction: column;
+		min-height: 100%;
+	}
+
+	#Header_creative #Action_bar.creative {
+		position: static;
+		flex-shrink: 0;
+		margin-top: auto;
+	}
+}
+
+/* Side slide (mobile/tablet menu) motion, driven by classes in main.js */
+#Side_slide { transition: right .3s ease; }
+body { transition: left .3s ease; }
+#body_overlay { transition: opacity .3s ease; }
