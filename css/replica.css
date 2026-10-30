@@ -75,28 +75,6 @@
 	to { opacity: 1; }
 }
 
-/* "Zeit für Ihr Wohlempfinden" row: portrait fills the full height of the text column beside it */
-@media only screen and (min-width: 768px) {
-	.mcb-wrap-b22f8yc14 .mcb-wrap-inner {
-		display: flex;
-		align-items: stretch;
-	}
-
-	.mcb-item-fx4l9u2tu > .animate,
-	.mcb-item-fx4l9u2tu .image_frame,
-	.mcb-item-fx4l9u2tu .image_wrapper {
-		height: 100%;
-	}
-
-	#Content .mcb-item-fx4l9u2tu .image_wrapper img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-	}
-}
-
 /* Desktop sidebar header: when it is taller than the window, it scrolls on its own
    (wheel, touch, keyboard focus) with the scrollbar hidden; the social icon follows the menu */
 @media only screen and (min-width: 1240px) {
