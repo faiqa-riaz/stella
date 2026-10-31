@@ -1,0 +1,410 @@
+/* SEO version of the homepage: extra content sections, built on the BeTheme tokens
+   (brown #855a19, beige #f6f2ec, headings #161922, body #454545, Hind Madurai). */
+
+:root {
+	--sm-brown: #855a19;
+	--sm-brown-dark: #6b4813;
+	--sm-beige: #f6f2ec;
+	--sm-line: #e8e0d4;
+	--sm-heading: #161922;
+	--sm-text: #454545;
+	--sm-muted: #6b6560;
+}
+
+.sm-section {
+	padding: 70px 0;
+}
+
+.sm-section.sm-beige {
+	background-color: var(--sm-beige);
+}
+
+.sm-section .section_wrapper {
+	display: block;
+}
+
+/* Section headings */
+.sm-head {
+	max-width: 760px;
+	margin: 0 auto 40px;
+	text-align: center;
+}
+
+.sm-eyebrow {
+	display: block;
+	margin-bottom: 8px;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: .08em;
+	text-transform: uppercase;
+	color: var(--sm-brown);
+}
+
+.sm-head h2,
+.sm-intro h1 {
+	margin-bottom: 15px;
+}
+
+.sm-head p {
+	margin-bottom: 0;
+}
+
+/* H1 in the intro keeps the theme's H2 scale so the page looks like the original */
+.sm-intro h1 {
+	font-size: 36px;
+	line-height: 42px;
+	font-weight: 300;
+	color: var(--sm-heading);
+}
+
+.sm-intro .sm-lead {
+	max-width: 760px;
+	margin: 0 auto 10px;
+	text-align: center;
+}
+
+/* Service tiles: short description under each title */
+.column_icon_box .sm-tile-text {
+	margin: -8px 0 0;
+	text-align: center;
+	color: var(--sm-text);
+}
+
+/* Haut & Haar: list of treatments */
+.sm-services {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 30px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sm-services li {
+	margin: 0;
+	padding: 16px 0;
+	list-style: none;
+	border-bottom: 1px solid var(--sm-line);
+}
+
+.sm-services h3 {
+	margin: 0 0 4px;
+	font-size: 20px;
+	line-height: 26px;
+	font-weight: 400;
+}
+
+.sm-services h3 a {
+	color: var(--sm-heading);
+	text-decoration: none;
+}
+
+.sm-services h3 a:hover {
+	color: var(--sm-brown);
+}
+
+.sm-services p {
+	margin: 0;
+}
+
+/* Brown-ticked lists */
+.sm-ticks {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+}
+
+.sm-ticks li {
+	position: relative;
+	margin: 0 0 8px;
+	padding-left: 28px;
+	list-style: none;
+}
+
+.sm-ticks li::before {
+	content: "";
+	position: absolute;
+	left: 2px;
+	top: 7px;
+	width: 12px;
+	height: 7px;
+	border-left: 2px solid var(--sm-brown);
+	border-bottom: 2px solid var(--sm-brown);
+	transform: rotate(-45deg);
+}
+
+/* Buttons */
+.sm-btn {
+	display: inline-block;
+	padding: 12px 26px;
+	border: 1px solid var(--sm-brown);
+	border-radius: 30px;
+	background: var(--sm-brown);
+	color: #fff !important;
+	font-size: 16px;
+	line-height: 22px;
+	text-decoration: none !important;
+	transition: background-color .2s ease, border-color .2s ease;
+}
+
+.sm-btn:hover,
+.sm-btn:focus-visible {
+	background: var(--sm-brown-dark);
+	border-color: var(--sm-brown-dark);
+}
+
+.sm-btn.sm-btn-ghost {
+	background: transparent;
+	color: var(--sm-brown) !important;
+}
+
+.sm-btn.sm-btn-ghost:hover,
+.sm-btn.sm-btn-ghost:focus-visible {
+	background: var(--sm-brown);
+	color: #fff !important;
+}
+
+.sm-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 10px;
+}
+
+/* Coaching / Spiritualität / Wellness cards */
+.sm-card {
+	height: 100%;
+	background: #fff;
+}
+
+.sm-card .image_wrapper img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.sm-card-body {
+	padding: 22px 24px 26px;
+}
+
+.sm-card h3 {
+	margin-bottom: 8px;
+}
+
+.sm-card h3 a {
+	color: var(--sm-heading);
+	text-decoration: none;
+}
+
+.sm-card ul {
+	margin: 12px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.sm-card ul li {
+	margin: 0;
+	padding: 7px 0;
+	list-style: none;
+	border-top: 1px solid var(--sm-line);
+}
+
+.sm-card ul li a {
+	text-decoration: none;
+}
+
+.sm-cards {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.sm-cards > .column {
+	display: flex;
+}
+
+.sm-note {
+	max-width: 760px;
+	margin: 10px auto 0;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+	color: var(--sm-muted);
+}
+
+/* About: qualification timeline */
+.sm-facts {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+}
+
+.sm-facts li {
+	display: grid;
+	grid-template-columns: 64px 1fr;
+	gap: 12px;
+	margin: 0;
+	padding: 8px 0;
+	list-style: none;
+	border-bottom: 1px solid var(--sm-line);
+}
+
+.sm-facts strong {
+	font-weight: 400;
+	color: var(--sm-brown);
+}
+
+/* Prices */
+.sm-prices {
+	width: 100%;
+	max-width: 760px;
+	margin: 0 auto;
+	border-collapse: collapse;
+	background: #fff;
+}
+
+.sm-prices th,
+.sm-prices td {
+	padding: 13px 18px;
+	border: 0;
+	border-bottom: 1px solid var(--sm-line);
+	text-align: left;
+	vertical-align: top;
+}
+
+.sm-prices thead th {
+	font-weight: 400;
+	color: #fff;
+	background: var(--sm-brown);
+}
+
+.sm-prices td:last-child,
+.sm-prices th:last-child {
+	text-align: right;
+	white-space: nowrap;
+}
+
+.sm-prices tbody tr:nth-child(even) {
+	background: #fbf9f6;
+}
+
+.sm-prices-foot {
+	max-width: 760px;
+	margin: 18px auto 0;
+	text-align: center;
+}
+
+/* FAQ */
+.sm-faq {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 30px 40px;
+}
+
+.sm-faq h3 {
+	margin-bottom: 8px;
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.sm-faq p {
+	margin: 0;
+}
+
+/* Booking band */
+.sm-cta {
+	padding: 60px 0;
+	background: var(--sm-brown);
+	color: #fff;
+}
+
+.sm-cta h2,
+.sm-cta p,
+.sm-cta a:not(.sm-btn) {
+	color: #fff;
+}
+
+.sm-cta .sm-cta-grid {
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+	gap: 30px;
+	align-items: center;
+}
+
+.sm-cta .sm-btn {
+	background: #fff;
+	border-color: #fff;
+	color: var(--sm-brown) !important;
+}
+
+.sm-cta .sm-btn:hover,
+.sm-cta .sm-btn:focus-visible {
+	background: var(--sm-beige);
+	border-color: var(--sm-beige);
+}
+
+.sm-cta .sm-btn.sm-btn-ghost {
+	background: transparent;
+	color: #fff !important;
+}
+
+.sm-cta .sm-btn.sm-btn-ghost:hover,
+.sm-cta .sm-btn.sm-btn-ghost:focus-visible {
+	background: rgba(255, 255, 255, .12);
+}
+
+.sm-cta address {
+	font-style: normal;
+	line-height: 28px;
+}
+
+/* Footer: readable copyright (original #ccc on beige was ~1.5:1) */
+#Footer .footer_copy .copyright {
+	color: var(--sm-muted);
+}
+
+#Footer .sm-nap {
+	margin-bottom: 15px;
+	color: #444;
+}
+
+/* Tablet */
+@media only screen and (max-width: 959px) {
+	.sm-section {
+		padding: 50px 0;
+	}
+
+	.sm-faq,
+	.sm-cta .sm-cta-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+	.sm-section {
+		padding: 40px 0;
+	}
+
+	.sm-intro h1 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+
+	.sm-services {
+		grid-template-columns: 1fr;
+	}
+
+	.sm-cards > .column {
+		display: block;
+	}
+
+	.sm-prices th,
+	.sm-prices td {
+		padding: 11px 12px;
+	}
+
+	.sm-actions .sm-btn {
+		width: 100%;
+		text-align: center;
+	}
+}
